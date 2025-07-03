@@ -1,10 +1,10 @@
 const data = {
-  name: 'Avneesh Agarwal',
+  name: 'Andres Munoz',
   image: '/avatar.png',
   username: 'avneesh0612',
   keywords:
     'Avneesh, Agarwal, Avneesh Agarwal, web dev, blogger, content creator',
-  profession: 'FullStack web3 developer',
+  profession: 'Data Analyst',
   intro:
     'Focused on building products that people love to use. I love to learn new things and share my knowledge with others. I teach others by creating content!',
   about:
@@ -32,7 +32,7 @@ const data = {
       links: {
         Live: 'https://www.yoketeam.com/',
       },
-      role: 'Fullstack web3 developer',
+      role: 'Data Analyst',
     },
     {
       name: 'Candypay',

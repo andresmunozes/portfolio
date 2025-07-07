@@ -6,9 +6,15 @@ const data = {
     'Avneesh, Agarwal, Avneesh Agarwal, web dev, blogger, content creator',
   profession: 'Data Analyst',
   intro:
-    'Focused on building products that people love to use. I love to learn new things and share my knowledge with others. I teach others by creating content!',
-  about:
-    'I’m a 17 y/o full-stack web3 developer building cool products and teaching others by creating content that revolves around many areas especially in web3.',
+    'Focused on transforming complex data into clear insights that drive strategic business decisions. I love to learn new things and am passionate about sharing my knowledge with others  !',
+
+  about: [
+    'I’m a Data Analyst with a unique background that blends business administration with deep technical expertise. With a Post-Degree Diploma in Data Analytics and three years of experience as a Cost Analyst in the manufacturing industry, I bring a strong understanding of business operations and financial context to every dataset I touch.',
+    
+    'Through my academic work, I\'ve had the opportunity to tackle data challenges across diverse domains—from clinical trials and environmental science to financial modeling and mobile analytics.',
+    
+    'I specialize in transforming complex data into actionable insights using tools like Advanced Excel, Power BI, SQL, Python, and R. My goal is to leverage critical thinking and problem-solving skills to help businesses make smarter, data-driven decisions. I am also experienced with cloud technologies, including Google Cloud Platform.'
+  ],
   website: 'https://www.avneesh.tech',
   projects: [
     {

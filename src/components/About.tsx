@@ -12,10 +12,13 @@ export const About = () => {
       <Title num={1} title="About me" />
 
       <div className="flex flex-col items-center justify-center md:flex-row md:justify-start md:items-start">
-        <p className="mt-10 text-xl text-textDark md:w-1/2 z-10">
-          {data.about}
-        </p>
-
+      <div className="mt-10 text-xl text-textDark md:w-1/2 z-10 space-y-6">
+        {data.about.map((paragraph, index) => (
+          <p key={index}>
+            {paragraph}
+          </p>
+        ))}
+      </div>
         <Image
           alt={data.name}
           className="object-contain relative mx-auto mt-20 border-2 rounded-full md:mt-0 md:ml-20 w-80 h-80 border-neon"

@@ -15,11 +15,13 @@ const App = ({ Component, pageProps }: AppProps) => {
       <NextSeo
         canonical={data.website}
         defaultTitle={data.name}
-        description={data.about}
+        // === FIX #1 HERE ===
+        description={data.about.join(' ')} 
         openGraph={{
           url: data.website,
           title: data.name,
-          description: data.about,
+          // === FIX #2 HERE ===
+          description: data.about.join(' '), 
           images: [
             {
               url: '/About.png',

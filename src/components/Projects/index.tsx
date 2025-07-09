@@ -31,7 +31,7 @@ export const Projects: FC<IProjectsProps> = ({ projects, showAll = false }) => {
       {!showAll && (
         <div className="mt-10">
           <Link href="/projects" legacyBehavior>
-            <a className="px-5 py-2 text-lg border-2 rounded-lg fill-current border-neon text-neon hover:scale-105">
+            <a className="px-5 py-2 text-lg border-2 rounded-lg fill-current border-neon text-neon hover:scale-105 inline-block relative z-10">
               View All Projects →
             </a>
           </Link>

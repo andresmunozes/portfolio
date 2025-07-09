@@ -31,7 +31,7 @@ export const Blog: FC<IBlogProps> = ({ Posts, showAll = false }) => {
       {!showAll && Posts && Posts.length > 0 && (
         <div className="mt-10">
           <Link href="/blog" legacyBehavior>
-            <a className="px-5 py-2 text-lg border-2 rounded-lg fill-current border-neon text-neon hover:scale-105">
+            <a className="px-5 py-2 text-lg border-2 rounded-lg fill-current border-neon text-neon hover:scale-105 inline-block relative z-10">
               View All Posts →
             </a>
           </Link>

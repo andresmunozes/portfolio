@@ -2,6 +2,7 @@ import { Title } from './Common/Title';
 import data from '@/data';
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
 
 export const About = () => {
   return (
@@ -26,6 +27,13 @@ export const About = () => {
           src={data.image}
           width={300}
         />
+      </div>
+      <div className="mt-12 text-center">
+        <Link href="/experience" legacyBehavior>
+          <a className="px-5 py-2 text-lg border-2 rounded-lg fill-current border-neon text-neon hover:scale-105 inline-block relative z-10">
+            View My Experience & Education →
+          </a>
+        </Link>
       </div>
     </div>
   );

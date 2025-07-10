@@ -1,3 +1,5 @@
+// Ubicación: tailwind.config.js
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -19,5 +21,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  // AÑADIMOS EL PLUGIN AQUÍ
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

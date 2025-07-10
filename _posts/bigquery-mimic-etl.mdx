@@ -1,0 +1,42 @@
+---
+title: 'ETL in the Cloud: Extracting MIMIC-IV Data with Google BigQuery'
+date: '2025-07-10'
+excerpt: 'A case study on how I used SQL and Google BigQuery to process a massive clinical database and build an analysis-ready dataset.'
+cover_image: '/projects/big_query.png'
+---
+
+## The Challenge: Clinical Data at Scale
+
+In the world of healthcare data analysis, one of the biggest challenges isn't the lack of information, but its sheer volume and complexity. The MIMIC-IV database, one of the most comprehensive clinical datasets in the world, contains decades of data from thousands of patients, but this wealth of information comes in a raw format, spread across dozens of tables.
+
+The goal of this project was clear: to dive into this massive database to build a clean, structured dataset focused on predicting weaning success for sepsis patients in the ICU.
+
+## The Solution: An ETL Pipeline with SQL and BigQuery
+
+To handle the volume and complexity of MIMIC-IV, a cloud platform was the only viable tool. I chose **Google BigQuery** for its incredible ability to execute complex queries over terabytes of data in seconds.
+
+The heart of this project was a single, robust SQL script that I engineered to perform a complete **ETL (Extract, Transform, Load)** process.
+
+### 1. Extraction: Isolating the Specific Cohort
+
+The first step was to identify and isolate the exact group of patients we needed. The SQL query handled:
+
+* Selecting only patients diagnosed with **sepsis-3**.
+* Filtering to include only the **first ICU stay** for each patient to avoid duplicate data.
+* Identifying the **first invasive mechanical ventilation event** for each of these patients.
+
+### 2. Transformation: Creating Value from Raw Data
+
+This was the most complex phase. The SQL query didn't just pull data; it transformed it to create new, high-value variables and metrics:
+
+* **Outcome Variable:** The `weaning_success` variable was constructed based on three complex clinical criteria: whether the patient was re-intubated, passed away, or required non-invasive ventilation for more than 48 hours post-weaning.
+* **Predictor Aggregation:** For over 20 clinical variables (vitals, lab results, ventilator settings), the query calculated the "worst" value (max or min) within a 24-hour window before weaning. This condensed thousands of data points per patient into a single, concise row.
+* **Metric Calculation:** Key indicators like RSBI (Rapid Shallow Breathing Index) and BMI (Body Mass Index) were calculated directly within the query.
+
+### 3. Load: The Final Dataset
+
+The result of this SQL pipeline is a perfectly structured, clean dataset, ready to be used in machine learning models. Each row represents a unique patient, and each column is a relevant, well-defined feature.
+
+## Conclusion
+
+This project was a practical exercise in large-scale data wrangling, where I demonstrated not only my command of **advanced SQL** but also my ability to design and execute a **complete ETL process** in a cloud environment like **Google BigQuery**. The ability to transform raw, complex data into a clean, actionable format is one of the most fundamental competencies in data analysis.

@@ -33,7 +33,7 @@ export const Intro = () => {
           spy={true}
           to="contact"
         >
-          <button className="py-2 px-5 !mt-10 hover:bg-neon hover:border-neon hover:backdrop-blur-lg hover:text-darkerBlue duration-100 border-neon border-2 text-neon rounded-lg">
+          <button className="py-2 px-5 !mt-10 hover:bg-neon hover:border-neon hover:backdrop-blur-lg hover:text-darkerBlue duration-100 border-neon border-2 text-neon rounded-lg relative z-10">
             Reach out to me!
           </button>
         </Link>
@@ -45,10 +45,10 @@ export const Intro = () => {
           offset={-100}
           smooth={true}
           spy={true}
-          to="work"
+          to="projects"
         >
-          <button className="py-2 px-5 !mt-10 text-darkerBlue bg-neon border-neon hover:bg-transparent duration-100 hover:text-neon border-2 rounded-lg">
-            Check out my work!
+          <button className="py-2 px-5 !mt-10 text-darkerBlue bg-neon border-neon hover:bg-transparent duration-100 hover:text-neon border-2 rounded-lg relative z-10">
+            Check out my projects!
           </button>
         </Link>
       </div>

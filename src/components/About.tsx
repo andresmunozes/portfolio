@@ -1,3 +1,5 @@
+// Ubicación: src/components/About.tsx
+
 import { Title } from './Common/Title';
 import data from '@/data';
 import Image from 'next/image';
@@ -12,25 +14,56 @@ export const About = () => {
     >
       <Title num={1} title="About me" />
 
-      <div className="flex flex-col items-center justify-center md:flex-row md:justify-start md:items-start">
-      <div className="mt-10 text-xl text-textDark md:w-1/2 z-10 space-y-6">
-        {data.about.map((paragraph, index) => (
-          <p key={index}>
-            {paragraph}
-          </p>
-        ))}
+      <div className="flex flex-col items-center justify-center md:flex-row md:justify-start md:items-start gap-8">
+        
+        {/* Columna Izquierda: Biografía */}
+        <div className="md:w-1/2 z-10 space-y-6 text-xl text-textDark">
+          {data.about.map((paragraph, index) => (
+            <p key={index}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
+
+        {/* Columna Derecha: Foto y Logos */}
+        <div className="md:w-1/2 flex flex-col items-center">
+          
+          {/* Foto de Perfil */}
+          <div className="relative mx-auto w-[256px] h-[256px] rounded-full border-2 border-neon flex items-center justify-center overflow-hidden">
+            <Image
+              alt={data.name}
+              className="object-cover w-full h-full"
+              height={320}
+              src={data.image}
+              width={320}
+            />
+          </div>
+
+          {/* === SECCION DE LOGOS === */}
+          <div className="w-full mt-8">
+            <p className="text-center text-lg text-textDark mb-4">My Technical Toolkit:</p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {data.skills.map((skill) => (
+                <div key={skill.name} className="flex flex-col items-center p-2 rounded-lg bg-bgLight" title={skill.name}>
+                  <Image
+                    src={skill.icon}
+                    alt={`${skill.name} logo`}
+                    width={55}
+                    height={70}
+                    className="object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          
+        </div>
       </div>
-        <Image
-          alt={data.name}
-          className="object-contain relative mx-auto mt-20 border-2 rounded-full md:mt-0 md:ml-20 w-[300px] h-[300px] border-neon"
-          height={300}
-          src={data.image}
-          width={300}
-        />
-      </div>
+
+      {/* Botón "View My Background" */}
       <div className="mt-12 text-center">
         <Link href="/experience" legacyBehavior>
-          <a className="px-5 py-2 text-lg border-2 rounded-lg fill-current border-neon text-neon hover:scale-105 inline-block relative z-10">
+          <a className="px-5 py-3 text-lg border-2 rounded-lg fill-current border-neon text-neon hover:scale-105 relative z-10 inline-block">
             View My Experience & Education →
           </a>
         </Link>

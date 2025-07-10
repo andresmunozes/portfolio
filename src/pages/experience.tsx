@@ -90,6 +90,7 @@ const ExperiencePage = () => {
 
             <h3 className="mt-8 text-2xl font-bold text-neon">Bachelor of Business Administration</h3>
             <p className="text-xl text-textDark">EAFIT University, Medellin, Colombia</p>
+            <p className="text-textDark italic">Specialization: Strategic Cost Management </p>
             <p className="text-sm text-gray-400">Graduated: December 2020</p>
           </div>
         </section>

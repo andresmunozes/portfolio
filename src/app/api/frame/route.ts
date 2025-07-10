@@ -119,7 +119,7 @@ export async function POST(req: NextRequest): Promise<Response> {
             {
               label: 'Blog',
               action: 'link',
-              target: 'https://blog.avneesh.tech',
+              target: '',
             },
             {
               label: 'Socials',

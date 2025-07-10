@@ -41,7 +41,7 @@ export const Intro = () => {
         <Link
           activeClass="active"
           duration={500}
-          href="contact"
+          href="projects"
           offset={-100}
           smooth={true}
           spy={true}

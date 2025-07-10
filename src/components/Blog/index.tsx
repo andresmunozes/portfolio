@@ -16,7 +16,7 @@ export const Blog: FC<IBlogProps> = ({ Posts, showAll = false }) => {
   return (
     <div
       id="blog"
-      className="flex flex-col items-center justify-center w-full max-w-5xl mx-auto p-5 md:p-0"
+      className="flex flex-col items-center justify-center max-w-7xl w-full m-20 p-5 md:p-0"
     >
       <Title num={3} title={showAll ? "All Blog Posts" : "Latest Posts"} />
       

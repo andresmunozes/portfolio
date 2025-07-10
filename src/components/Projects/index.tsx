@@ -16,7 +16,7 @@ export const Projects: FC<IProjectsProps> = ({ projects, showAll = false }) => {
   return (
     <div
       id="projects"
-      className="flex flex-col items-center justify-center w-full max-w-5xl mx-auto"
+      className="flex flex-col items-center justify-center w-full max-w-5xl m-20"
     >
 
       <Title num={2} title={showAll ? "All My Projects" : "Featured Projects"} />
